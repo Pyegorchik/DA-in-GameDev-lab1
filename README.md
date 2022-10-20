@@ -60,7 +60,7 @@ cd C:\Users\Yegor\Lab3
 Затем в корень проекта добавляем файл rollerball_config.yaml из приложенных материалов.
 
 Запускаем работу ML Agent следующей командой.
-mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
+<пробел><пробел><пробел><пробел>mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 Модель начала обучаться.
 ![image](https://user-images.githubusercontent.com/114165213/196635333-e5f82db7-fd43-42d3-afa7-f34707c46acd.png)
@@ -71,9 +71,9 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 Код конфигурации для обучения сети.
 
->behaviors:
-> RollerBall:
->    trainer_type: ppo
+behaviors:
+RollerBall:
+    trainer_type: ppo
     hyperparameters:
       batch_size: 10
       buffer_size: 100
