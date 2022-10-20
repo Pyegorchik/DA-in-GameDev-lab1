@@ -36,7 +36,7 @@
 
 Затем создадим виртуальную среду для обучения модели в Anaconda Promt через серию последующих команд:
 
-conda create -n MlAgent python=3.6.13
+    conda create -n MlAgent python=3.6.13
 
 conda activate MlAgent
 
