@@ -71,9 +71,9 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 Код конфигурации для обучения сети.
 
-behaviors:
-  RollerBall:
-    trainer_type: ppo
+>behaviors:
+> RollerBall:
+>    trainer_type: ppo
     hyperparameters:
       batch_size: 10
       buffer_size: 100
