@@ -38,15 +38,15 @@
 
     conda create -n MlAgent python=3.6.13
 
-conda activate MlAgent
+    conda activate MlAgent
 
 Установим также pytorch для возможности работы с ML Agent.
 
-pip install torch~1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
+    pip install torch~1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 Чтобы не забыть в будущем, с помощью команды ниже перейдем в папку с нашим Unity проектом.
 
-cd C:\Users\Yegor\Lab3
+    cd C:\Users\Yegor\Lab3
 
 В нашем Unity проекте создадим сферу, плоскость и шар, и дадим им текстуры.
 ![image](https://user-images.githubusercontent.com/114165213/196631358-1305444e-e908-48ed-b7dc-8022828ab682.png)
@@ -60,7 +60,7 @@ cd C:\Users\Yegor\Lab3
 Затем в корень проекта добавляем файл rollerball_config.yaml из приложенных материалов.
 
 Запускаем работу ML Agent следующей командой.
-< >< >< >< >mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
+    mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 Модель начала обучаться.
 ![image](https://user-images.githubusercontent.com/114165213/196635333-e5f82db7-fd43-42d3-afa7-f34707c46acd.png)
@@ -70,7 +70,7 @@ cd C:\Users\Yegor\Lab3
 ## Задание 2
 
 Код конфигурации для обучения сети.
-
+    
 behaviors:
 RollerBall:
     trainer_type: ppo
@@ -99,76 +99,75 @@ RollerBall:
 
 #hyperparameters
 
-trainer_type: ppo
+    trainer_type: ppo
 
 Тип нейросети расшифровывающийся как Proximal Policy Optimization.
 
-batch_size: 10
+    batch_size: 10
 
 Количество экспериментов перед итерацией обновления градиентного спуска.
 
-buffer_size: 100
+    buffer_size: 100
 
 Количество экспериментов, то есть количество наблюдений, действий и полученных вознаграждений, которых необходимо провести перед тем как обновить модель. Кратно batch_size.
 
-learning_rate: 3.0e-4 
+    learning_rate: 3.0e-4 
 
 Сила каждого шага при обновлении при градиентном спуске.
 
-beta: 5.0e-4
+    beta: 5.0e-4
 
 Регулирует меру хаоса - энтропийную регулирязации, что делает поведение агента более разнообразным и обеспечивает полное ислледование пространства действий.
 
-epsilon: 0.2
+    epsilon: 0.2
 
 Устанавливает допустимый порог расхождения между старым и новым значением при обновлении при прохождении градиентного спуска.
 
-lambd: 0.99
+    lambd: 0.99
 
 Соотвествует параметру, использоемому при расчете generalized advantage estimate (GAE). Это можно рассматривать как то, насколько агент полагается на свою текущую оценку стоимости при вычислении обновленной оценки стоимости.
 
-num_epoch: 3
+    num_epoch: 3
 
 Количество проходов через buffer size во время градиентного спуска.
 
-learning_rate_schedule: linear
+    learning_rate_schedule: linear
 
 Описывает что learning_rate будет изменяться линейно.
 
-
 #network_settings
 
-normalize: false
+    normalize: false
 
 Описывает применять ли нормализацию, основанную на скользящем среднем и дисперсии, на входящие данные.
 
-hidden_units: 128
+    hidden_units: 128
 
 Количество нейронов в каждом слое нейронной сети.
 
-num_layers: 2
+    num_layers: 2
 
 Количество слоев в нейронной сети.
 
 
 #reward_signals
-gamma: 0.99 
+    gamma: 0.99 
 
 Коэффицент обеценивания будущих вознаграждений. Параметр влияет на то на какие награды будет ориентироваться модель - на краткосрочные или долгосрочные награды.
 
-strength: 1.0
+    strength: 1.0
 
 Величина награды.
 
-max_steps: 500000
+    max_steps: 500000
 
 Количество шагов симуляции.
 
-time_horizon: 64
+    time_horizon: 64
 
 Параметр соответствует тому, сколько шагов опыта необходимо собрать для каждого агента, прежде чем добавить его в буфер опыта.
 
-summary_freq: 10000
+    summary_freq: 10000
 
 Количество опытов, которое необходимо собрать перед созданием и отображением статистики обучения.
 
