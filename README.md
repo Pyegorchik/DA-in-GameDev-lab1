@@ -71,7 +71,7 @@
 
 Код конфигурации для обучения сети.
     
-behaviors:
+    behaviors:
 RollerBall:
     trainer_type: ppo
     hyperparameters:
@@ -97,7 +97,7 @@ RollerBall:
     
 Разберем каждую строку отдельно.
 
-#hyperparameters
+# hyperparameters
 
     trainer_type: ppo
 
@@ -135,7 +135,7 @@ RollerBall:
 
 Описывает что learning_rate будет изменяться линейно.
 
-#network_settings
+# network_settings
 
     normalize: false
 
@@ -150,7 +150,7 @@ RollerBall:
 Количество слоев в нейронной сети.
 
 
-#reward_signals
+# reward_signals
     gamma: 0.99 
 
 Коэффицент обеценивания будущих вознаграждений. Параметр влияет на то на какие награды будет ориентироваться модель - на краткосрочные или долгосрочные награды.
