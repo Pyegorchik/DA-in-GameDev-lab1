@@ -70,9 +70,9 @@
 ## Задание 2
 
 Код конфигурации для обучения сети.
-    
-    behaviors:
-RollerBall:
+
+behaviors:
+  RollerBall:
     trainer_type: ppo
     hyperparameters:
       batch_size: 10
@@ -94,7 +94,7 @@ RollerBall:
     max_steps: 500000
     time_horizon: 64
     summary_freq: 10000
-    
+
 Разберем каждую строку отдельно.
 
 # hyperparameters
