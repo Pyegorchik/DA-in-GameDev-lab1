@@ -71,13 +71,13 @@
 
 Код конфигурации для обучения сети.
 
-behaviors:
-  RollerBall:
-    trainer_type: ppo
-    hyperparameters:
-      batch_size: 10
-      buffer_size: 100
-      learning_rate: 3.0e-4   
+    behaviors:
+      RollerBall:
+        trainer_type: ppo
+        hyperparameters:
+          batch_size: 10
+          buffer_size: 100
+          learning_rate: 3.0e-4   
       beta: 5.0e-4
       epsilon: 0.2
       lambd: 0.99
